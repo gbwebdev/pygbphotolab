@@ -1,0 +1,8 @@
+local:
+  photolab_path: "" #Path to the photolab directory
+camera:
+  drive: "" #drive letter or mountpoint of the camera drive
+  raw_extensions: # List of RAW file extensions to search for on the camera
+    - "RAW"
+  keep_after_download:   # If set to true, pictures will be moved to <camera drive>/already_downloaded/<date>/ instead of being removed after download.
+  
