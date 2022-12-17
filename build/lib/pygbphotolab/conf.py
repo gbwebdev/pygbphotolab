@@ -24,7 +24,6 @@ class Conf:
         script_dirpath = path.dirname(script_filepath)
         module_rootpath =  path.realpath(path.join(script_dirpath, "../.."))
         module_conffile_path = path.join(module_rootpath, "conf.yaml")
-        print(module_conffile_path)
 
         if path.isfile(module_conffile_path):
             logging.info(f"Found a module-relative configuration file : {module_conffile_path}")
@@ -48,7 +47,7 @@ class Conf:
                 return True
         return False
 
-    def _set_user_conffile_linux(self) -> bool:
+    def _set_user_conffile_windows(self) -> bool:
         homedir = path.expandvars('$HOME')
         user_conffile_path = path.join(homedir, ".gbphotolab.conf.yaml")
  
